@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>DevilGPT — Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -23,7 +24,6 @@
             overflow: hidden;
         }
 
-        /* Background effect */
         body::before {
             content: '';
             position: absolute;
@@ -120,7 +120,6 @@
             transform: scale(0.97);
         }
 
-        /* Toast Notification */
         .toast {
             position: fixed;
             top: 24px;
@@ -172,18 +171,18 @@
 </div>
 
 <script>
-    // ========== AKUN DEFAULT ==========
-    // GAMPANG BUAT NAMBAH AKUN: tinggal tambahin object di array ini
+    // ========== AKUN DEFAULT (GAMPANG TAMBAHIN) ==========
     const ACCOUNTS = [
         { username: "admin", password: "admin123" },
         { username: "zetsu", password: "zetsu123" },
-        { username: "user", password: "user123" }
+        { username: "root", password: "root123" },
+        { username: "devil", password: "devil123" }
     ];
 
     function showToast() {
         const toast = document.getElementById('toast');
         toast.classList.remove('show');
-        void toast.offsetWidth; // force reflow
+        void toast.offsetWidth;
         toast.classList.add('show');
         setTimeout(() => {
             toast.classList.remove('show');
